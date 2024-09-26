@@ -1,0 +1,132 @@
+body{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffe5d9;  
+}
+
+header {
+    background-color: #ffe5d4;
+    padding: 1px;
+    margin: 2px;
+    text-align: center;
+}
+
+.links ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    position: static; 
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a:visited {
+    color: #333;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+/* #menu-toggle:checked ~#meny {
+    display: block;
+}
+#menu-toggle{
+    display: none; */
+/* } */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+}
+
+.container {
+    padding: 0.4rem;
+    margin-top: 1rem;
+}
+
+label {
+    font-family: "DM Serif Display", serif;
+    font-size: 1rem;
+    display: block;
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+}
+
+button {
+    padding: 0.5rem;
+    margin: 0.4rem;
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+/* För mindre skärmar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Visa hamburgarmenyn på små skärmar */
+    }
+    /* #menu-toggle:checked ~#meny {
+        display: block;
+    }
+    #menu-toggle{
+        display: none;
+    }     */
+
+    .links ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #ffe5d4; /* Gör menyn synlig */
+        padding: 10px;
+    }
+
+    .links.active ul {
+        display: flex; /* Visa menyn när den är aktiv */
+    }
+
+    .links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .container {
+        margin-top: 2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
